@@ -6,7 +6,7 @@
 @import url(reset.css);
 
 body{
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 18px;
     color: #7d7d7d;
     width: auto;
@@ -20,42 +20,36 @@ body{
 .link-red,
 .link-blue,
 .link-green {
-font-family: Poppins, sans-serif;
-font-weight: 700;
-font-size: 40px;
-font-style: oblique;
-margin-right: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    font-style: oblique;
+    margin-right: 15px;
 }
-
 .link-red{
     color: rgb(172, 7, 45);
 }
-
 .link-blue{
     color: #6B77E5;
 }
-
 .link-green{
     color: #04a344;
 }
- 
-
 
 .wrapper{
     margin: 0 auto; 
     max-width: 1200px;
 }
-
+/* ------------------------------------ */
 .consulting{
     max-width: 692px;
     margin: 0 auto 150px;
 }
-
 .consulting 
 h2,
 h3,
 h4{
-    font-family: Poppins, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     line-height: 1.27;
     font-size: 30px;
@@ -71,12 +65,10 @@ h3{
 h4{
     font-size: 20px;
 }
-.block-why {
-    margin-bottom: 40px;
-}
 .text{
     line-height: 1.46;
     text-align: justify;
+    margin-bottom: 40px;
 }
 .block-why .lead {
     color: #6B77E5;
@@ -86,21 +78,23 @@ h4{
     color: #40DDB6;
 }
 .main-photo {
-    padding: 10px 12px 13px;
-    margin-bottom: 24px;
+    margin-bottom: 37px;
+    max-width: 100%;
 }
-.consulting .title {
-    margin-bottom: 3px;
+.title {
+    margin-bottom: 12px;
 }
-.text-why {
-    margin-bottom: 42px;
+.block-list{
+    font-size: 0;
 }
-
 .list-photo {
     margin-right: 29px;
+    width: 331px;
 }
 .inline-block{
     display: inline-block;
+    font-size: 18px;
+    width: 332px;
 }
 .consulting .subtitle {
     margin-bottom: 15px;
@@ -145,7 +139,7 @@ h4{
 
 .jewellery h1{
     line-height: 1.47;
-    font-family: DM Serif Text;
+    font-family: "DM Serif Text";
     font-size: 59px;
     color: #0E333D;
     margin-bottom: 25px;
@@ -206,7 +200,7 @@ h3{
 }
 
 .article__subtitle{
-    font-family: Poppins, sans-serif;
+    font-family: "Poppins", sans-serif;
     color: rgb(171, 67, 215);
     text-shadow:2px 2px 4px #c8e90f;
 }
