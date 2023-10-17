@@ -14,9 +14,16 @@ body{
 
 .header,
 .footer{
+    margin: 50px auto;
     text-align: center;
 }
-
+.nav{
+    display: inline-block;
+}
+.nav li{
+    display: inline-block;
+    vertical-align: middle;
+}
 .link-red,
 .link-blue,
 .link-green {
@@ -185,7 +192,6 @@ h4{
 
 .article 
 div,
-ul,
 img, 
 h3{
     margin-bottom: 20px;
