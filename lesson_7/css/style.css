@@ -5,7 +5,6 @@ body{
     font-family: "Inter", sans-serif;
     font-size: 18px;
     color: #7d7d7d;
-    width: auto;
 }
 
 .wrapper{
@@ -17,6 +16,9 @@ body{
 .header,
 .footer{
     text-align: center;
+}
+.header{
+    margin-bottom: 150px;
 }
 .nav li{
     display: inline-block;
@@ -43,7 +45,6 @@ body{
 }
 .subtitle{
     margin: 0 auto;
-    padding: 150px 0 70px;
     text-align: center;
 }
 .square-block{
