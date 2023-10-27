@@ -20,30 +20,47 @@ body{
     max-width: 852px;
     margin: 0 auto;
 }
-.projects__lead{
+.content__lead{
     text-align: center;
     margin-bottom: 14px;
 }
-.projects__lead span{
+.content__lead span{
     background-color: #40DDB6;
     display: inline-block;
     margin-right: 6px;
     width: 12px;
     height: 12px;
 }
-.projects__title{
+.content__title{
     max-width: 687px;
     margin: 0 auto 14px;
 }
-.projects__text{
+.content__text{
     margin-bottom: 47px;
     line-height: 1.46;
     text-align: center;
 }
-.projects-list {
+.goods {
     font-size: 0;
 }
-.projects-list__subtitle {
+.goods__item {
+    max-height: 584px;
+    max-width: 384px;
+    display: inline-block;
+    margin-bottom: 58px;
+}
+.goods__img {
+    margin-bottom: 24px;
+    width: 384px; 
+    min-height: 501px;
+    display: inline-block; 
+}
+.goods__descr {
+    max-height: 57px;
+    max-width: 384px;
+    overflow: auto;
+}
+.goods__title {
     color: #37393F;
     font-family: "Poppins";
     font-size: 20px;
@@ -51,7 +68,7 @@ body{
     line-height: 1.27;
     margin-bottom: 10px;
 }
-.projects-list__datum {
+.goods__text {
     font-size: 14px;
     line-height: 1.46;
     min-width: 22px;
@@ -59,27 +76,16 @@ body{
     background: url(../img/projects/data.jpg) no-repeat;
     background-size: 22px;
 }
-.list-item{
-    display: inline-block;
-    margin-bottom: 58px;
+.goods__item--margin{
+    margin-right: 34px;
 }
-.list-image{
-    margin-bottom: 24px;
-    width: 384px; 
-    min-height: 501px;
-    display: inline-block; 
-}
-.item-text{
-    max-height: 57px;
-    max-width: 384px;
-    overflow: auto;
-}
+
 .monitor{
     background: url(../img/projects/monitor.jpg) no-repeat;
     margin-right: 34px;
 }
 .man{
-    background: url(../img/projects/man.jpg) no-repeat left top;
+    background: url(../img/projects/footer-photo.webp) no-repeat left top;
     margin-right: 34px;
 }
 .mobil{
