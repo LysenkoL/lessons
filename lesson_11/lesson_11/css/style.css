@@ -1,0 +1,12 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+body{
+    color: #807D7E;
+    font-family: "Causten";
+    font-weight: 500;
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
