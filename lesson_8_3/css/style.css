@@ -1,0 +1,54 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+body{
+    font-family: "Causten",sans-serif;
+    color: #FFF;
+}
+.fashion {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 0;
+}
+.fashion__content,
+.fashion__img{
+    display: inline-block;
+    min-height: 640px;
+    width: 100%;
+}
+.fashion__content {
+    max-width: 614px;
+    background: url(../img/black.jpg) no-repeat;
+    vertical-align: top;
+    padding: 183px 74px 175px;
+}
+.content__title {
+    font-family: "Core Sans C";
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.47;
+    letter-spacing: 0.208px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.content__text {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 50px;
+}
+.content__link {
+    padding: 12px 44px;
+    background-color: #fff;
+    color: #3C4242;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    border-radius: 8px;
+}
+.fashion__img {
+    max-width: 626px;
+    background: url(../img/yellow.jpg) center / cover no-repeat;
+}
