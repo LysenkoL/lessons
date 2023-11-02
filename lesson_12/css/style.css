@@ -1,0 +1,84 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+body{
+    font-family: "Inter", sans-serif;
+    color: #7d7d7d;
+}
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 100%;
+    overflow: clip;
+}
+[class*="__container"] {
+    max-width: 1220px;
+    margin: 100px auto;
+}
+.experts__row{
+    font-size: 0;
+}
+.row-experts{
+    margin-bottom: 31px;
+}
+.experts__card:not(:last-child){
+    margin-right: 31px;
+}
+.card {
+    display: inline-block;
+    max-width: 386px;
+    min-height: 532px;
+    position: relative;
+}
+.card__name {
+    text-align: center;
+    background-color: #fff;
+    padding-top: 24px;
+    width: 341px;
+    height: 114px;
+    z-index: 2;
+    position: absolute;
+    top: 396px;
+    left: 22px;
+}
+.card::before{
+    content: "";
+    background-color: rgba(107, 119, 229, 0.70);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 386px;
+    height: 532px;
+    visibility: hidden;
+}
+.card:hover .card__list,
+.card:hover::before{
+    visibility: visible;
+}
+.card__title {
+    color: #37393F;
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.52;
+    margin-bottom: 4px;
+}
+.card__subtitle {
+    font-size: 18px;   
+    line-height: 1.35;
+}
+.card__list {
+    visibility: hidden;
+    position: absolute;
+    top: 243.5px;
+    left: 107.5px;
+}
+.list {
+    text-align: center;
+}
+.card__item {
+    display: inline-block;
+}
+.card__item:not(:last-child){
+    margin-right: 13px;
+}
