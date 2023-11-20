@@ -15,6 +15,194 @@ body{
     max-width: 1220px;
     margin: 100px auto;
 }
+.header{
+    background: linear-gradient(90deg,
+        hsla(50, 90%, 88%, 1) 0%,
+        hsla(335, 93%, 68%, 1) 50%,
+        hsla(252, 89%, 78%, 1) 100%);
+    text-align: center;
+    color: black;
+    letter-spacing: 1px;
+}
+.menu__list {
+    font-size: 0;
+}
+.menu__item {
+    position: relative;
+	display: inline-block;
+    font-size: 40px;
+}
+.menu__link{
+    padding: 25px 0;
+}
+.menu__item:not(:last-child){
+    margin-right: 50px;
+}
+.menu__item:hover a{
+    color:rgb(117, 81, 142);
+    text-shadow: 2px 3px 3px #939696;
+}
+.menu__menu-sub{
+    position: absolute;
+    top: 90px;
+    left: 0;
+}
+.sub-menu {
+    min-width: 250px;
+    text-align: left;
+    padding: 20px 0 20px 20px;
+    z-index: 3;
+    background: rgb(240, 170, 229);
+    visibility: hidden;
+    opacity: 0;
+}
+.sub-menu::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+.sub-menu__item{
+    position: relative;
+}
+.menu__item:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+}
+.sub-menu__item:not(:last-child),
+.subsub__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.menu__item:hover .sub-menu__link:hover,
+.sub-menu__item:hover .subsub__link:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.sub-menu__sub {
+    position: absolute;
+    top: 0;
+    left: 230px;
+}
+.subsub {
+    min-width: 150px;
+    text-align: left;
+    padding: 20px;
+    z-index: 3;
+    background: #a995f9;
+    visibility: hidden;
+    opacity: 0;
+}
+.sub-menu__item:hover .subsub {
+    opacity: 1;
+    visibility: visible;
+}
+.subsub::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 10px;
+    height: 100%;
+}
+
+/* ========== Praktik ============ */
+.praktik{
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+}
+.title{
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: sandybrown;
+}
+.text{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.item {
+    height: 100px;
+    text-align: center;
+    padding: 25px 0;
+    margin: 0 auto;
+    border: 10px double black;
+    font-size: 30px;
+    color: #000;
+}
+.item:not(:last-child){
+    margin-bottom: 20px;
+}
+.item--green{
+    background-color: greenyellow;
+}
+.item--pink{
+    background-color: pink;
+}
+.item--blue{
+    background-color: blue;
+}
+/* relative */
+.relative__item.item--pink{
+    position: relative;
+    top: 50px;
+    left: 30px;
+}
+/* Relative + Z-index */
+.z-relative__item.item--green{
+    position: relative;
+    top: 50px;
+    left: 30px;
+}
+.z-relative__item.item--pink{
+    position: relative;
+    z-index: 2;
+}
+/* absolute */
+.absolute{
+    position: relative;
+}
+.absolute__item.item--pink{
+    position: absolute;
+    top: 210px;
+    left: 150px;
+}
+/* absolute без родителя с релатив */
+.view-absolute__item.item--pink{
+    position: absolute;
+    top: 300px; 
+    left: 20px;
+}
+/* fixed */
+.fixed__item.item--pink{
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+}
+/* sticky */
+.sticky__item.item--blue{
+    position: sticky;
+    top: 0px;
+}
+.icon img{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 150px;
+    right: 15px;
+    border-radius: 10%;
+    border: 5px red double;
+}
+.icon:hover img{
+    height: 70px;
+    width: 70px;
+    border: 5px rgb(48, 48, 42) double;
+}
+/* ======== Page ========= */
 .experts__row{
     font-size: 0;
 }

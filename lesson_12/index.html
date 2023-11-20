@@ -10,10 +10,41 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header" id="header">
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#experts" class="menu__link">experts</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#praktik" class="menu__link">praktik</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">submenu</a>
+                        <ul class="menu__menu-sub sub-menu">
+                            <li class="sub-menu__item"><a href="#default" class="sub-menu__link">default</a></li>
+                            <li class="sub-menu__item"><a href="#relative" class="sub-menu__link">relative</a></li>
+                            <li class="sub-menu__item"><a href="#z-relative" class="sub-menu__link">z-relative</a></li>
+                            <li class="sub-menu__item"><a href="#absolute" class="sub-menu__link">absolute</a></li>
+                            <li class="sub-menu__item"><a href="#view-absolute" class="sub-menu__link">view-absolute</a></li>
+                            <li class="sub-menu__item"><a href="#sticky" class="sub-menu__link">sticky</a></li>
+                            <li class="sub-menu__item"><a href="#fixed" class="sub-menu__link">fixed</a>
+                                <ul class="sub-menu__sub subsub">
+                                    <li class="subsub__item"><a class="subsub__link" href="#header">header</a></li>
+                                    <li class="subsub__item"><a class="subsub__link" href="#footer">footer</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <main>
-            <div class="experts">
+            <!-- ==== Page ======= -->
+            <div class="experts" id="experts">
                 <div class="experts__container">
                     <div class="experts__row row-experts">
                         <div class="experts__card card">
@@ -104,6 +135,171 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- ========== Praktik ============ -->
+            <div class="praktik" id="praktik">
+                <!-- по умолчанию -->
+                <div class="default" id="default">
+                    <div class="default__container">
+                        <h2 class="default__title title">По умолчанию</h2>
+                        <div class="default__text text">
+                            <p>
+                                Элементы отображаются как обычно. Использование свойств left, top, right, bottom и z-index не приводит к каким-либо результатам.
+                            </p>
+                        </div>
+                        <div class="default__item item item--green">
+                            <p>Block 1</p>
+                        </div>
+                        <div class="default__item item item--pink">
+                            <p>Block 2</p>
+                        </div>
+                        <div class="default__item item item--blue">
+                            <p>Block 3</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- relative -->
+                <div class="relative" id="relative">
+                    <div class="relative__container">
+                        <h2 class="relative__title title">Relative</h2>
+                        <div class="relative__text text">
+                            <p>
+                                Положение элемента устанавливается относительно его исходного положения в коде. Добавление свойств left, top, right и bottom изменяет позицию элемента и сдвигает его в ту или иную сторону от первоначального расположения.
+                            </p>
+                        </div>
+                        <div class="relative__item item item--green">
+                            <p>Block 1</p>
+                        </div>
+                        <div class="relative__item item item--pink">
+                            <p>Block 2</p>
+                        </div>
+                        <div class="relative__item item item--blue">
+                            <p>Block 3</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- relative z-index-->
+                <div class="z-relative " id="z-relative">
+                    <div class="z-relative__container">
+                        <h2 class="z-relative__title title">Relative + Z-index</h2>
+                        <div class="z-relative__text text">
+                            <p>
+                                Каждый элемент может находиться как ниже, так и выше других объектов веб-страницы, их размещением по z-оси и управляет z-index. Это свойство работает только для элементов, у которых значение position задано как absolute, fixed или relative.
+                            </p>
+                        </div>
+                        <div class="z-relative__item item item--green">
+                            <p>Block 1</p>
+                        </div>
+                        <div class="z-relative__item item item--pink">
+                            <p>Block 2</p>
+                        </div>
+                        <div class="z-relative__item item item--blue">
+                            <p>Block 3</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- absolute -->
+                <div class="absolute" id="absolute">
+                    <div class="absolute__container">
+                        <h2 class="absolute__title title">Absolute</h2>
+                        <div class="absolute__text text">
+                            <p>
+                                Элемент якобы вырывается из кода и зависайт в воздухе. Он перестает влиять на остальные элементы. Добавление свойств left, top, right и bottom изменяет позицию элемента и сдвигает его в ту или иную сторону относительно родителя у колого задан параметр position: relative;
+                            </p>
+                        </div>
+                        <div class="absolute__item item item--green">
+                            <p>Block 1</p>
+                        </div>
+                        <div class="absolute__item item item--pink">
+                            <p>Block 2</p>
+                        </div>
+                        <div class="absolute__item item item--blue">
+                            <p>Block 3</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- absolute без релатив у прямого родителя -->
+                <div class="view-absolute" id="view-absolute">
+                    <div class="view-absolute__container">
+                        <h2 class="view-absolute__title title">Absolute без релатив у прямого родителя</h2>
+                        <div class="view-absolute__text text">
+                            <p>
+                                Элемент якобы вырывается из кода и зависайт в воздухе. Он перестает влиять на остальные элементы. Добавление свойств left, top, right и bottom изменяет позицию элемента и сдвигает его в ту или иную сторону относительно родителя у колого задан параметр position: relative; Если такого нет то элемент позиционируется относительно окна браузера.
+                            </p>
+                        </div>
+                        <div class="view-absolute__item item item--green">
+                            <p>Block 1</p>
+                        </div>
+                        <div class="view-absolute__item item item--pink">
+                            <p>Block 2</p>
+                        </div>
+                        <div class="view-absolute__item item item--blue">
+                            <p>Block 3</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- fixed -->
+                <div class="fixed" id="fixed">
+                    <div class="fixed__container">
+                        <h2 class="fixed__title title">fixed для шапки сайта</h2>
+                        <div class="fixed__text text">
+                            <p>
+                                Элемент якобы вырывается из кода и зависайт в воздухе. Фиксируется, то есть не скролится вместе с содержимым. Он перестает влиять на остальные элементы. Добавление свойств left, top, right и bottom изменяет позицию элемента и сдвигает его в ту или иную сторону относительно окна браузера.
+                            </p>
+                        </div>
+                        <div class="fixed__item item item--green">
+                            <p>Block 1</p>
+                        </div>
+                        <div class="fixed__item item item--pink">
+                            <p>Block 2</p>
+                        </div>
+                        <div class="fixed__item item item--blue">
+                            <p>Block 3</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- sticky -->
+                <div class="sticky " id="sticky">
+                    <div class="sticky__container">
+                        <h2 class="sticky__title title">sticky для шапки сайта или подсказок</h2>
+                        <div class="sticky__text text">
+                            <p>
+                                Это гибридное сочетание значений static и fixed. Изначально єлемент ведет себя как static но после того как скролл доходит до его границы он становиться fixed и прилипает к указанной позиции top или bottom. Липкий блок
+                            </p>
+                        </div>
+                        <div class="sticky__item item item--green">
+                            <p>Block 1</p>
+                        </div>
+                        <div class="sticky__item item item--pink">
+                            <p>Block 2</p>
+                        </div>
+                        <div class="sticky__item item item--blue">
+                            <p>Block 3</p>
+                        </div>
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex tenetur aut, blanditiis repudiandae consequatur corporis error accusantium eligendi sapiente eum ab ipsum asperiores itaque eius quod neque incidunt quas? Voluptatum cumque inventore minus nemo tempore. Repellat ea, pariatur cumque asperiores voluptatum obcaecati consequatur accusamus aspernatur nihil minima? Quo sit deleniti, natus ipsum dolor, asperiores, ea nostrum aut temporibus tempora veritatis culpa eligendi fugit quasi esse sunt voluptatum? Excepturi vero, architecto enim consectetur tempore aperiam tenetur autem quae omnis numquam nam laboriosam explicabo, unde quidem. Facere sapiente iste ea hic non fuga natus porro, temporibus consequatur molestiae vero velit, recusandae unde repellat nostrum suscipit. Hic porro blanditiis iste inventore delectus laudantium repellat! Molestias maxime sunt eos, ad rem omnis nisi iusto dolor eius est, ab eaque quas, officiis earum repellendus odio voluptatibus recusandae nihil sed dignissimos id temporibus in vitae eum! Dicta asperiores at iste, quia cum ut, non officia dolorum distinctio qui sed temporibus soluta obcaecati delectus cupiditate modi recusandae placeat illo labore molestiae maxime libero excepturi? Iste esse, rerum dicta voluptatibus minus nulla excepturi quidem quod pariatur commodi hic obcaecati maxime tenetur vitae. Ducimus numquam officiis explicabo accusamus, autem vitae laborum doloremque consequatur quasi id reprehenderit ipsam facere nisi voluptates quos maxime sapiente aut quis laboriosam nobis veritatis velit quam. Ab ex eveniet eos autem itaque quod consequatur, numquam minus deleniti obcaecati, tempore suscipit quia quisquam esse illo totam, dicta aperiam. Obcaecati qui eius hic nostrum vel dolor omnis totam quia commodi tenetur, iusto voluptatem eos debitis sequi unde?</p>
+                        </div>
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex tenetur aut, blanditiis repudiandae consequatur corporis error accusantium eligendi sapiente eum ab ipsum asperiores itaque eius quod neque incidunt quas? Voluptatum cumque inventore minus nemo tempore. Repellat ea, pariatur cumque asperiores voluptatum obcaecati consequatur accusamus aspernatur nihil minima? Quo sit deleniti, natus ipsum dolor, asperiores, ea nostrum aut temporibus tempora veritatis culpa eligendi fugit quasi esse sunt voluptatum? Excepturi vero, architecto enim consectetur tempore aperiam tenetur autem quae omnis numquam nam laboriosam explicabo, unde quidem. Facere sapiente iste ea hic non fuga natus porro, temporibus consequatur molestiae vero velit, recusandae unde repellat nostrum suscipit. Hic porro blanditiis iste inventore delectus laudantium repellat! Molestias maxime sunt eos, ad rem omnis nisi iusto dolor eius est, ab eaque quas, officiis earum repellendus odio voluptatibus recusandae nihil sed dignissimos id temporibus in vitae eum! Dicta asperiores at iste, quia cum ut, non officia dolorum distinctio qui sed temporibus soluta obcaecati delectus cupiditate modi recusandae placeat illo labore molestiae maxime libero excepturi? Iste esse, rerum dicta voluptatibus minus nulla excepturi quidem quod pariatur commodi hic obcaecati maxime tenetur vitae. Ducimus numquam officiis explicabo accusamus, autem vitae laborum doloremque consequatur quasi id reprehenderit ipsam facere nisi voluptates quos maxime sapiente aut quis laboriosam nobis veritatis velit quam. Ab ex eveniet eos autem itaque quod consequatur, numquam minus deleniti obcaecati, tempore suscipit quia quisquam esse illo totam, dicta aperiam. Obcaecati qui eius hic nostrum vel dolor omnis totam quia commodi tenetur, iusto voluptatem eos debitis sequi unde?</p>
+                        </div>
+                        <div class="sticky__item item item--blue">
+                            <p>Block 4</p>
+                        </div>
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex tenetur aut, blanditiis repudiandae consequatur corporis error accusantium eligendi sapiente eum ab ipsum asperiores itaque eius quod neque incidunt quas? Voluptatum cumque inventore minus nemo tempore. Repellat ea, pariatur cumque asperiores voluptatum obcaecati consequatur accusamus aspernatur nihil minima? Quo sit deleniti, natus ipsum dolor, asperiores, ea nostrum aut temporibus tempora veritatis culpa eligendi fugit quasi esse sunt voluptatum? Excepturi vero, architecto enim consectetur tempore aperiam tenetur autem quae omnis numquam nam laboriosam explicabo, unde quidem. Facere sapiente iste ea hic non fuga natus porro, temporibus consequatur molestiae vero velit, recusandae unde repellat nostrum suscipit. Hic porro blanditiis iste inventore delectus laudantium repellat! Molestias maxime sunt eos, ad rem omnis nisi iusto dolor eius est, ab eaque quas, officiis earum repellendus odio voluptatibus recusandae nihil sed dignissimos id temporibus in vitae eum! Dicta asperiores at iste, quia cum ut, non officia dolorum distinctio qui sed temporibus soluta obcaecati delectus cupiditate modi recusandae placeat illo labore molestiae maxime libero excepturi? Iste esse, rerum dicta voluptatibus minus nulla excepturi quidem quod pariatur commodi hic obcaecati maxime tenetur vitae. Ducimus numquam officiis explicabo accusamus, autem vitae laborum doloremque consequatur quasi id reprehenderit ipsam facere nisi voluptates quos maxime sapiente aut quis laboriosam nobis veritatis velit quam. Ab ex eveniet eos autem itaque quod consequatur, numquam minus deleniti obcaecati, tempore suscipit quia quisquam esse illo totam, dicta aperiam. Obcaecati qui eius hic nostrum vel dolor omnis totam quia commodi tenetur, iusto voluptatem eos debitis sequi unde?</p>
+                        </div>
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex tenetur aut, blanditiis repudiandae consequatur corporis error accusantium eligendi sapiente eum ab ipsum asperiores itaque eius quod neque incidunt quas? Voluptatum cumque inventore minus nemo tempore. Repellat ea, pariatur cumque asperiores voluptatum obcaecati consequatur accusamus aspernatur nihil minima? Quo sit deleniti, natus ipsum dolor, asperiores, ea nostrum aut temporibus tempora veritatis culpa eligendi fugit quasi esse sunt voluptatum? Excepturi vero, architecto enim consectetur tempore aperiam tenetur autem quae omnis numquam nam laboriosam explicabo, unde quidem. Facere sapiente iste ea hic non fuga natus porro, temporibus consequatur molestiae vero velit, recusandae unde repellat nostrum suscipit. Hic porro blanditiis iste inventore delectus laudantium repellat! Molestias maxime sunt eos, ad rem omnis nisi iusto dolor eius est, ab eaque quas, officiis earum repellendus odio voluptatibus recusandae nihil sed dignissimos id temporibus in vitae eum! Dicta asperiores at iste, quia cum ut, non officia dolorum distinctio qui sed temporibus soluta obcaecati delectus cupiditate modi recusandae placeat illo labore molestiae maxime libero excepturi? Iste esse, rerum dicta voluptatibus minus nulla excepturi quidem quod pariatur commodi hic obcaecati maxime tenetur vitae. Ducimus numquam officiis explicabo accusamus, autem vitae laborum doloremque consequatur quasi id reprehenderit ipsam facere nisi voluptates quos maxime sapiente aut quis laboriosam nobis veritatis velit quam. Ab ex eveniet eos autem itaque quod consequatur, numquam minus deleniti obcaecati, tempore suscipit quia quisquam esse illo totam, dicta aperiam. Obcaecati qui eius hic nostrum vel dolor omnis totam quia commodi tenetur, iusto voluptatem eos debitis sequi unde?</p>
+                        </div>
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex tenetur aut, blanditiis repudiandae consequatur corporis error accusantium eligendi sapiente eum ab ipsum asperiores itaque eius quod neque incidunt quas? Voluptatum cumque inventore minus nemo tempore. Repellat ea, pariatur cumque asperiores voluptatum obcaecati consequatur accusamus aspernatur nihil minima? Quo sit deleniti, natus ipsum dolor, asperiores, ea nostrum aut temporibus tempora veritatis culpa eligendi fugit quasi esse sunt voluptatum? Excepturi vero, architecto enim consectetur tempore aperiam tenetur autem quae omnis numquam nam laboriosam explicabo, unde quidem. Facere sapiente iste ea hic non fuga natus porro, temporibus consequatur molestiae vero velit, recusandae unde repellat nostrum suscipit. Hic porro blanditiis iste inventore delectus laudantium repellat! Molestias maxime sunt eos, ad rem omnis nisi iusto dolor eius est, ab eaque quas, officiis earum repellendus odio voluptatibus recusandae nihil sed dignissimos id temporibus in vitae eum! Dicta asperiores at iste, quia cum ut, non officia dolorum distinctio qui sed temporibus soluta obcaecati delectus cupiditate modi recusandae placeat illo labore molestiae maxime libero excepturi? Iste esse, rerum dicta voluptatibus minus nulla excepturi quidem quod pariatur commodi hic obcaecati maxime tenetur vitae. Ducimus numquam officiis explicabo accusamus, autem vitae laborum doloremque consequatur quasi id reprehenderit ipsam facere nisi voluptates quos maxime sapiente aut quis laboriosam nobis veritatis velit quam. Ab ex eveniet eos autem itaque quod consequatur, numquam minus deleniti obcaecati, tempore suscipit quia quisquam esse illo totam, dicta aperiam. Obcaecati qui eius hic nostrum vel dolor omnis totam quia commodi tenetur, iusto voluptatem eos debitis sequi unde?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Absolut icon -->
+            <div class="icon">
+                <img src="img/praktik/info.webp" alt="info icon">
             </div>
         </main>
         <footer class="footer" id="footer">
