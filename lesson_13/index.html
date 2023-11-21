@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 13</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header" id="header">
+            <a class="header__link" href="car.html">Auto</a>
+        </header>
+        <main>
+            <div class="praktik">
+                <div class="praktik__container">
+                    <!-- ------- translate ------------ -->
+                    <div class="praktik__row">
+                        <h2 class="praktik__title">Translate (x, y)</h2>
+                        <div class="praktik__text">
+                            <p>
+                                Сдвигает элемент на новое место, перемещая относительно изначального положения объекта вправо и вниз, используя координаты X и Y. Записывается следующим образом translate (x,y).
+                            </p>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--default"></div>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--translatepx"></div>
+                        </div>
+                        <div class="block margin-block block">
+                            <div class="block__item block__item--translateproz"></div>
+                        </div>
+                    </div>
+                    <!-- =========== skale ============ -->
+                    <div class="praktik__row">
+                        <h2 class="praktik__title">Scale (x, y)</h2>
+                        <div class="praktik__text">
+                            <p>
+                                Масштабирует элементы, делая их больше или меньше.
+                            </p>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--default-skale"></div>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--skale-small"></div>
+                        </div>
+                        <div class="block margin-block block">
+                            <div class="block__item block__item--skale-big"></div>
+                        </div>
+                    </div>
+                    <!-- =========== rotate ============ -->
+                    <div class="praktik__row">
+                        <h2 class="praktik__title">Rotate (n + deg)</h2>
+                        <div class="praktik__text">
+                            <p>
+                                Поворачивает элементы.
+                            </p>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--default-rotate"></div>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--rotate-plus"></div>
+                        </div>
+                        <div class="block margin-block block">
+                            <div class="block__item block__item--rotate-minus"></div>
+                        </div>
+                    </div>
+                    <!-- ======== skew ============== -->
+                    <div class="praktik__row">
+                        <h2 class="praktik__title">Skew (x + deg, y + deg)</h2>
+                        <div class="praktik__text">
+                            <p>
+                                Деформирует (наклоняет) элементы.
+                            </p>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--default-skew"></div>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--skew-xy"></div>
+                        </div>
+                        <div class="block margin-block block">
+                            <div class="block__item block__item--skew-y"></div>
+                        </div>
+                        <div class="block margin-block block">
+                            <div class="block__item block__item--skew-x"></div>
+                        </div>
+                    </div>
+                    <!-- ========= Matrix (a, c, b, d, x, y)============== -->
+                    <div class="praktik__row">
+                        <h2 class="praktik__title">Matrix (a, c, b, d, x, y)</h2>
+                        <div class="praktik__text">
+                            <p>
+                                Позволяет объединить несколько функций 2D-трансформаций в одной.
+                            </p>
+                            <p>
+                                Значение a изменяет масштаб по горизонтали. Значение от 0 до 1 уменьшает элемент, больше 1 — увеличивает. Значение c деформирует (сдвигает) стороны элемента по оси Y, положительное значение — вверх, отрицательное — вниз. Значение b деформирует (сдвигает) стороны элемента по оси X, положительное значение — влево, отрицательное — вправо. Значение d изменяет масштаб по вертикали. Значение меньше 1 уменьшает элемент, больше 1 — увеличивает. Значение x смещает элемент по оси X, положительное — вправо, отрицательное — влево. Значение y смещает элемент по оси Y, положительное значение — вниз, отрицательное — вверх.
+                            </p>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--default-matrix"></div>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--matrix"></div>
+                        </div>
+                    </div>
+                    <!-- ========= Множественные 2D трансформации ==========  -->
+                    <div class="praktik__row">
+                        <h2 class="praktik__title">Множественные 2D трансформации</h2>
+                        <div class="praktik__text">
+                            <p>
+                                Позволяет объединить несколько функций 2D-трансформаций в одной.
+                            </p>
+                            <p>
+                                translate + rotate + scale
+                            </p>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--2d-set"></div>
+                        </div>
+                    </div>
+                    <!-- ====== Transform-origin ======== -->
+                    <div class="praktik__row">
+                        <h2 class="praktik__title">Transform-origin</h2>
+                        <div class="praktik__text">
+                            <p>
+                                Позволяет сместить центр трансформации, относительно которого происходит изменение положения/размера/формы элемента.
+                            </p>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--default-origin"></div>
+                        </div>
+                        <div class="block margin-block">
+                            <div class="block__item block__item--origin"></div>
+                        </div>
+                    </div>
+                    <!-- ======= Perspective, perspective-origin ============ -->
+                    <div class="praktik__row">
+                        <h2 class="praktik__title">Perspective, perspective-origin</h2>
+                        <div class="praktik__text">
+                            <p>
+                                Установка глубины и смена точки начала координат.
+                            </p>
+                        </div>
+                        <div class="block margin-block block--perspective-default">
+                            <div class="block__item block__item--perspective"></div>
+                        </div>
+                        <div class="block margin-block block--perspective">
+                            <div class="block__item block__item--perspective"></div>
+                        </div>
+                        <div class="block margin-block block--perspective-origin-default">
+                            <div class="block__item block__item--perspective"></div>
+                        </div>
+                        <div class="block margin-block block--perspective-origin">
+                            <div class="block__item block__item--perspective"></div>
+                        </div>
+                    </div>
+                    <!-- ======= Rotate3d (x, y, z, deg) ========= -->
+                    <div class="praktik__row">
+                        <h2 class="praktik__title">Rotate3d (x, y, z, deg)</h2>
+                        <div class="praktik__text">
+                            <p>
+                                Вращает элемент относительно трех осей. Элемент поворачивается под углом, задаваемым последним параметром относительно вектора направления x,y,z.
+                            </p>
+                        </div>
+                        <div class="block margin-block margin-block--rotate3d">
+                            <div class="block__item block__item--rotate3d-default"></div>
+                        </div>
+                        <div class="block margin-block margin-block--rotate3d">
+                            <div class="block__item block__item--rotate3d"></div>
+                        </div>
+                    </div>
+                    <!-- ====== Множественные 3D трансформации ======= -->
+                    <div class="praktik__row">
+                        <h2 class="praktik__title">Множественные 3D трансформации</h2>
+                        <div class="praktik__text">
+                            <p>
+                                Позволяет объединить несколько функций 3D-трансформаций в одной.
+                            </p>
+                        </div>
+                        <div class="block margin-block margin-block--rotate3d">
+                            <div class="block__item block__item--rotate3d-set"></div>
+                        </div>
+                        <div class="block margin-block margin-block--rotate3d-preserve">
+                            <div class="block__item block__item--preserve-3d"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    </div>
+    </div>
+    </main>
+    <footer class="footer" id="footer">
+        <a class="footer__link" href="#">Home</a>
+    </footer>
+    </div>
+</body>
+
+</html>
