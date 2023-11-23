@@ -1,0 +1,604 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+body{
+    font-family: "Inter", sans-serif;
+    color: #7d7d7d;
+}
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 100%;
+    overflow: clip;
+}
+[class*="__container"] {
+    max-width: 1220px;
+    margin: 100px auto;
+}
+.header,
+.footer{
+    text-align: center;
+}
+.header__link,
+.footer__link{
+    margin-top: 50px;   
+    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+    color: rgb(9, 4, 4);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 30px;
+    border-radius: 50%;
+    border: 6px double darkslateblue;
+    background-color: rgba(190, 197, 199, 0.55);
+    box-shadow: 2px 5px 10px gray;
+    pointer-events: auto;
+    z-index: 2;
+}
+.header__link:hover,
+.footer__link:hover{
+    color: darkslateblue;
+    background-color: rgba(210, 224, 160, 0.55);
+}
+.praktik{
+    font-size: 0;
+    text-align: center;
+}
+.page{
+    background: url(../img/back.webp)  no-repeat;
+    background-size: cover;
+}
+/* ======== car ========= */
+.car{
+    margin-top: 60px;
+    font-size: 0;
+    position: relative;
+    animation: moveCar 15s linear infinite;
+}
+@keyframes moveCar{
+
+0%{
+left: -70%;
+}
+50%{
+left: 50%;
+}
+100%{
+left: 150%;
+}
+}
+.car__dach {
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+.dach__left,
+.dach__right {
+    width: 400px;
+    height: 40px;
+    background: gold;
+    display: inline-block;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    padding-top: 10px;
+    letter-spacing: 5px;
+    animation: colorChange 10s linear infinite;
+}
+@keyframes colorChange {
+    0% {
+        color: red;
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
+    10% {
+        color: orange;
+        letter-spacing: 6px;
+    }
+    20% {
+        color: yellow;
+        letter-spacing: 7px;
+        font-size: 25px;
+    }
+    30% {
+        color: green;
+        letter-spacing: 8px;
+    }
+    40% {
+        color: blue;
+        letter-spacing: 9px;
+    }
+    50% {
+        color: indigo;
+        letter-spacing: 10px;
+        font-size: 30px;
+    }
+    60% {
+        color: violet;
+        letter-spacing: 9px;
+    }
+    70% {
+        color: purple;
+        letter-spacing: 8px;
+        font-size: 25px;
+    }
+    80% {
+        color: pink;
+        letter-spacing: 7px;
+    }
+    90% {
+        color: brown;
+        letter-spacing: 6px;
+    }
+    100% {
+        color: red;
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
+}
+
+.bus-text {
+    animation: colorChange 10s linear infinite;
+}
+
+.dach__left {
+    border-radius: 40% 60% 0% 100% / 100% 0% 100% 0%;
+    right: 0;
+    text-align: end;
+}
+.dach__right {
+    border-radius: 60% 40% 100% 0% / 0% 100% 0% 100%;
+    left: 0;
+
+}
+.window{
+    position: relative;
+}
+.window__left{
+    width: 0; 
+    height: 0;
+    border-bottom: 200px solid #CDE5E1;
+    border-left: 100px solid transparent;
+    border-radius: 5%;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    display: inline-block;
+}
+.window__block{
+    width: 100px;
+    height: 200px;
+    background-color:#CDE5E1;
+    border: 1px solid black;
+    display: inline-block;
+    position: relative;
+    top: 40px;
+    left: 150px;
+}
+.window__right{
+    width: 0; 
+    height: 0; 
+    border-bottom: 200px solid #CDE5E1;
+    border-right: 100px solid transparent;
+    position: absolute;
+    top: 40px;
+    right: 31px;
+    display: inline-block;
+}
+.car__body{
+    border-radius: 40%;
+    background-color: gold;
+    height: 100px;
+    width: 1000px;
+    position: relative;
+    left: 50px;
+    animation: rockCar 2s ease-in-out infinite;
+}
+@keyframes rockCar {
+    0%, 100% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(3deg);
+    }
+}
+.body-car__middle {
+    width: 200px;
+    height: 100px;
+    background-color: brown;
+    position: relative;
+    border: 1px solid black;
+    left: 400px;
+}
+.body-car__stuffe{
+    width: 200px;
+    height: 100px;
+    opacity: 0;
+}
+.body-car__middle:hover .body-car__stuffe{
+    transform: translate(0, 30px);
+    background-color: rgba(165, 42, 42, 0.646);
+    opacity: 1;
+}
+.wheels__left,
+.wheels__right {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(46, 39, 39, 0.9);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: -30px;
+    animation: rotateWheels 2s linear infinite;
+}
+@keyframes rotateWheels {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.wheels__left {
+    left: 150px;
+}
+.wheels__left:hover,
+.wheels__right:hover{
+    box-shadow: -60px 20px 70px rgb(45, 44, 44);
+}
+.wheels__right{
+    left: 600px;
+}
+.wheels__disk,
+.wheels__disk{
+    width: 100px;
+    height: 100px;
+    background: url(../img/koleso.webp) no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.wheels__centr{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.body-car__linie{
+    height: 20px;
+    width: 250px;
+    background-color: darkorange;
+    position: relative;
+    bottom: 160px;
+    left: 100px;
+    border: 5px double black;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulseLine 2s ease-in-out infinite;
+}
+@keyframes pulseLine {
+    0% {
+        transform: scale(1);
+        background-color: darkorange;
+        box-shadow: 0 0 10px 5px rgba(255, 165, 0, 0.8);
+    }
+    50% {
+        transform: scale(1.2);
+        background-color: #ffa500;
+        box-shadow: 0 0 20px 10px rgba(255, 165, 0, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        background-color: darkorange;
+        box-shadow: 0 0 10px 5px rgba(255, 165, 0, 0.8);
+    }
+}
+.body-car__linie:not(:last-child){
+    margin-right: 300px;
+}
+.half-ellipse3 { 
+    border-radius: 100% 0 0 100% / 50%; 
+    bottom: 125px;
+    left: -5px;
+}
+.half-ellipse3:hover,
+.half-ellipse4:hover{
+    background-color: rgba(196, 40, 196, 0.718);
+    box-shadow: -20px 30px 50px rgb(255, 85, 0);
+}
+.half-ellipse4{
+    border-radius: 0 100% 100% 0 / 50%;
+    left: 960px;
+    bottom: 75px;
+}
+.half-ellipse3,
+.half-ellipse4 { 
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: 1px black solid;
+    animation: blinkHeadlights 2s infinite;
+}
+@keyframes blinkHeadlights {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+.window__mann,
+.window__einhorn,
+.window__robot,
+.window__pig,
+.window__elsa,
+.window__cat {
+    width: 100px;
+    height: 150px;
+    visibility: hidden;
+    opacity: 0;
+}
+.window__mann{
+    background: url(../img/mann.webp) center no-repeat;
+    background-size: contain;
+}
+.window__einhorn{
+    background: url(../img/einhorn.webp) center no-repeat;
+    background-size: contain;
+}
+.window__robot{
+    background: url(../img/robot.webp) center no-repeat;
+    background-size: contain;
+}
+.window__pig{
+    background: url(../img/pig.webp) center no-repeat;
+    background-size: contain;
+}
+.window__elsa{
+    background: url(../img/elsa.webp) center no-repeat;
+    background-size: contain;
+}
+.window__cat{
+    background: url(../img/cat.webp) center no-repeat;
+    background-size: contain;
+}
+.window__block--mann:hover .window__mann,
+.window__block--einhorn:hover .window__einhorn,
+.window__block--robot:hover .window__robot,
+.window__block--pig:hover .window__pig,
+.window__block--elsa:hover .window__elsa,
+.window__block--cat:hover .window__cat{
+    visibility: visible;
+    opacity: 1;
+    z-index: 5;
+}
+.window__block--pink-left,
+.window__block--pink-right {
+    perspective: 400px;
+    transform-style: preserve-3d;
+    background-color: pink;
+}
+.window__preserve {
+    width: 100px;
+    height: 200px;
+    border: 1px solid #000;
+    background-color: darkorange;
+}
+.window__block--pink-left .window__preserve:hover {
+    transform: rotateY(20deg);
+    background-color: rgba(22, 104, 163, 0.588);
+}
+.window__block--pink-right .window__preserve:hover {
+    transform: rotateY(160deg);
+    background-color: rgba(22, 104, 163, 0.588);
+}
+/* ========= Animation =========== */
+.animation{
+    padding: 50px;
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+}
+.animation__block,
+.flip-scale-up-hor {
+    width: 180px;
+    height: 180px;
+    background-color: rgba(255, 0, 225, 0.548);
+    margin: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 50px;
+}
+.animation__block:not(:last-child){
+    margin-right: 50px;
+}
+.animation__block.slide-in {
+    animation: slideIn 2s forwards infinite;
+}
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-60%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+.animation__block.rotate {
+    animation: rotate 2s linear infinite;
+}
+    @keyframes rotate {
+    0% {
+        transform: rotate(360deg);
+    }
+    }
+.animation__block.scale {
+    animation: scale 2s alternate infinite;
+}
+    @keyframes scale {
+        0% {
+            transform: scale(1.5);
+        }
+    }
+.animation__block.fade-in {
+    animation: fadeIn 2s forwards infinite;
+}
+    @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    }
+
+
+/*  обьемный кубик  - /работа Chat GPT*/
+.perspektive{
+    perspective: 800px;
+}
+.cube-container {
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+}
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCube 10s linear infinite;
+}
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 123, 255, 0.8);
+    border: 2px solid #202223;
+}
+.front { transform: translateZ(100px); }
+.back { transform: rotateY(180deg) translateZ(100px); }
+.left { transform: rotateY(-90deg) translateZ(100px); }
+.right { transform: rotateY(90deg) translateZ(100px); }
+.top { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+@keyframes rotateCube {
+    0% { transform: rotateX(0) rotateY(0) rotateZ(0); }
+    100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+/* ========= работа с текстом ======= */
+.text {
+    text-align: center;
+}
+.margin-text{
+    margin-bottom: 50px;
+}
+.text__animation {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    animation: textAnimation 4s linear infinite;
+}
+@keyframes textAnimation {
+    0%, 100% {
+        color: #333;
+        letter-spacing: 2px;
+    }
+    50% {
+        color: #e74c3c;
+        letter-spacing: 5px;
+    }
+    90% {
+        color: #a03ce7;
+        letter-spacing: 9px;
+    }
+}
+/* ====== смена фона картинки ===== */
+.image {
+    position: relative;
+    width: 400px;
+    height: 530px;
+    overflow: hidden;
+}
+.margin-image{
+    margin: 0 auto;
+}
+.image__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out, transform 1s linear;
+}
+.image__item:nth-child(1) {
+    background-image: url(../img/foto1.webp);
+    opacity: 1;
+    transform: scale(1.1); 
+}
+.image__item:nth-child(2) {
+    background-image: url(../img/foto2.webp);
+}
+.image:hover .image__item:nth-child(1) {
+    opacity: 0;
+    transform: scale(1);
+}
+.image:hover .image__item:nth-child(2) {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+
+.flip-scale-up-hor {
+	-webkit-animation: flip-scale-up-hor 2.5s linear infinite;
+	        animation: flip-scale-up-hor 2.3s linear infinite;
+            background: url(../img/site1.webp) no-repeat;
+            background-size: cover;
+}
+
+@-webkit-keyframes flip-scale-up-hor {
+0% {
+    -webkit-transform: scale(1) rotateX(0);
+            transform: scale(1) rotateX(0);
+}
+50% {
+    -webkit-transform: scale(2.5) rotateX(-90deg);
+            transform: scale(2.5) rotateX(-90deg);
+}
+100% {
+    -webkit-transform: scale(1) rotateX(-180deg);
+            transform: scale(1) rotateX(-180deg);
+}
+}
+@keyframes flip-scale-up-hor {
+0% {
+    -webkit-transform: scale(1) rotateX(0);
+            transform: scale(1) rotateX(0);
+}
+50% {
+    -webkit-transform: scale(2.5) rotateX(-90deg);
+            transform: scale(2.5) rotateX(-90deg);
+}
+100% {
+    -webkit-transform: scale(1) rotateX(-180deg);
+            transform: scale(1) rotateX(-180deg);
+}
+}
+
